@@ -51,4 +51,16 @@ public class EmpController {
 		m.addAttribute("command",emp);
 		return "empeditform";
 	}
+	/* It updates model object. */
+	@RequestMapping(value = "/editsave", method = RequestMethod.POST)
+	public String editsave(@ModelAttribute("emp") Emp emp) {
+		dao.update(emp);
+		return "redirect:/viewemp";
+	}
+	/* It deletes record for the given id in the URL and redirect to /viewemp */
+	@RequestMapping(value="/deleteemp/{id}", method = RequestMethod.GET)
+	public String delete(@PathVariable int id) {
+		dao.delete(id);
+		return "redirect:/viewemp";
+	}
 }

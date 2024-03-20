@@ -8,5 +8,10 @@
 </head>
 <body>
 <h3>Hi ${userName}</h3>
+<br>
+  <a href="empform">Add Employee</a>  
+  <a href="viewemp">View Employees</a>
+<br>
+<a href="/spring-mvc-example">Go Back to Home</a>
 </body>
 </html>
